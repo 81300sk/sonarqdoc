@@ -1,0 +1,41 @@
+-----------------------------History of installation-------------------------------------------
+amazon-linux-extras install epel
+    3  clear
+    4  amazon-linux-extras install java-openjdk11 -y
+    5  java --version
+    6  javac
+    7  wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.6.zip
+    8  ls
+    9  unzip sonarqube-7.6.zip
+   11  ls -la
+   12  rm -rf sonarqube-7.6.zip
+   14  cp -R sonarqube-7.6 /opt/
+   15  ls
+   16  cd /opt/
+   17  ls
+   18  cd sonarqube-7.6/
+   20  cd conf/
+   21  ls -l
+   22  cat sonar.properties | grep 9000
+   23  cat sonar.properties | grep database
+   26  cd bin/
+   27  ls -l
+   28  pwd
+   29  cd linux-x86-64
+   30  ls -l
+   31  ./sonar.sh start
+   32  ./sonar.sh status
+   33  cd ../..
+   35  cd logs/
+   37  tail sonar.log
+   38  cat /etc/passwd
+   39  useradd sonar
+   40  passwd sonar
+   47  cat passwor.txt
+   48  visudo
+   49  cd /opt/
+   51  cd sonarqube-7.6/
+   [root@mysonar opt]# chown -R sonar:sonar sonarqube-7.6
+
+   57  chown -R sonar:sonar sonarqube-7.6                 on root user
+   58  su - sonar
